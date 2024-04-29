@@ -30,6 +30,9 @@ public:
 
     void insertAt(size_t index, const T& value);
     void removeAt(size_t index);
+
+    size_t Size() const { return size; }
+    bool isEmpty() const { return size == 0; }
 };
 
 template<typename T>
