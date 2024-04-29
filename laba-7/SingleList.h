@@ -36,4 +36,14 @@ public:
     size_t Size() const;
 
     bool Find(const T& value)const;
+
+    // friend operators
+    friend ostream& operator<<(ostream& os, const SingleList<T> list) {
+        shared_ptr<Node<T>> current = list.head;
+        while (current != nullptr) {
+            os << current->data << " ";
+            current = current->next;
+        }
+        return os;
+    }
 };
