@@ -24,5 +24,6 @@ public:
     void pushFront(const T& value);
     void pushBack(const T& value);
 
-
+    void popFront();
+    void popBack();
 };
