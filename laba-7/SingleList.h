@@ -31,4 +31,7 @@ public:
 
     void insertAt(size_t index, const T& value);
     void removeAt(size_t index);
+
+    bool isEmpty() const;
+    size_t Size() const;
 };
