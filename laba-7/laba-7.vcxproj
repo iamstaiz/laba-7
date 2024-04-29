@@ -129,6 +129,10 @@
   <ItemGroup>
     <ClCompile Include="laba-7.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DoubleList.h" />
+    <ClInclude Include="SingleList.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
