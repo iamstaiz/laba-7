@@ -34,4 +34,6 @@ public:
 
     bool isEmpty() const;
     size_t Size() const;
+
+    bool Find(const T& value)const;
 };
