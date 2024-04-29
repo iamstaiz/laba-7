@@ -24,6 +24,9 @@ public:
 
     void pushBack(const T& value);
     void pushFront(const T& value);
+
+    void popBack();
+    void popFront();
 };
 
 template<typename T>
@@ -57,4 +60,33 @@ void DoubleList<T>::pushFront(const T& value) {
     }
     head = newNode->prev;
     size++;
+}
+
+template<typename T>
+void DoubleList<T>::popBack() {
+    if (tail == nullptr)
+        throw std::out_of_range("List is empty");
+    if (head == tail) {
+        head.reset();
+    }
+    else {
+        tail->prev->next.reset();
+    }
+    tail = tail->prev;
+    size--;
+}
+
+template<typename T>
+void DoubleList<T>::popFront() {
+    if (head == nullptr)
+        throw out_of_range("List is empty");
+    if (head == tail) {
+        tail.reset();
+    }
+    else {
+        head->next->prev.reset();
+    }
+    head = head->next;
+    size--;
+
 }
