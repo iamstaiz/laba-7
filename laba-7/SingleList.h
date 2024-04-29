@@ -26,4 +26,9 @@ public:
 
     void popFront();
     void popBack();
+
+    T& operator[](size_t index)const;
+
+    void insertAt(size_t index, const T& value);
+    void removeAt(size_t index);
 };
